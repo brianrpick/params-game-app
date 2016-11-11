@@ -1,1 +1,4 @@
 <h1><%=@first_name.capitalize%> <%=@last_name.capitalize%></h1>
+<% if @first_name.first == "A" || @first_name.first == "a"  %>
+  <h2>“Hey, your name starts with the first letter of the alphabet!”</h2>
+<%end%>
