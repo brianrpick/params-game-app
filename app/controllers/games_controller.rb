@@ -2,18 +2,18 @@ class GamesController < ApplicationController
   def home
     @first_name = params[:first_name]
     @last_name = params[:last_name]
-    @input_answer = params[:input_answer]
   end
 
   def number_game
-    guess = params[:guess]
-    @answer = 36
+    guess = params[:guess].to_i
+    answer = 36
     @check = " "
-    if guess.to_i == 36
+
+    if guess == answer
       @check = "You Won!"
-    elsif guess.to_i < 36
+    elsif guess < answer
       @check = "Guess higher!"
-    elsif guess.to_i > 36
+    elsif guess > answer
       @check = "Guess lower!"
     end
   end
