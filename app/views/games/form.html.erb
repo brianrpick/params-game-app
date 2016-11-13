@@ -1,0 +1,12 @@
+<h1> My Form</h1>
+
+<%= form_tag 'result_form', method: :post do %>
+  <div>
+    <%= label_tag :guess%>:
+    <%= text_field_tag :guess%>
+  </div>
+
+  <div>
+    <%= submit_tag "Submit" %>
+  </div>
+<%end%>
